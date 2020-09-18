@@ -12,7 +12,7 @@ int calculator_operand1 = 0;
 int calculator_operand2 = 0;
 
 /* Valid operations */
-enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, GREATER, SMALLER, RECTAREA, RECTPERI, PRIME, BITWISEAND, BITWISEOR, BITWISENOT EXIT };
+enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, GREATER, SMALLER, RECTAREA, RECTPERI, PRIME, BITWISEAND, BITWISEOR, BITWISENOT, EXIT };
 
 /* Display the menu of operations supported */
 void calculator_menu(void);
@@ -159,10 +159,10 @@ void calculator_menu(void)
             __fpurge(stdin);
             getchar();
             break;
-        case PRIME:
+        case BITWISENOT:
             printf("\n\t!%d = %d\nEnter to continue", 
             calculator_operand1, 
-            prime(calculator_operand1));
+            bitwisenot(calculator_operand1));
             
             __fpurge(stdin);
             getchar();
