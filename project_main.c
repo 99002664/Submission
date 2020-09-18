@@ -12,7 +12,7 @@ int calculator_operand1 = 0;
 int calculator_operand2 = 0;
 
 /* Valid operations */
-enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, GREATER, EXIT };
+enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, GREATER, SMALLER, RECTAREA, RECTPERI, EXIT };
 
 /* Display the menu of operations supported */
 void calculator_menu(void);
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 void calculator_menu(void)
 {
     printf("\nAvailable Operations\n");
-    printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Greater\n6. Exit");
+    printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Greater\n6. Smaller\n7. Rectarea\n8. Rectperi\n9. Exit");
     printf("\n\tEnter your choice\n");
    
      __fpurge(stdin);
@@ -106,7 +106,34 @@ void calculator_menu(void)
             __fpurge(stdin);
             getchar();
             break;
-        case 6:
+        case SMALLER:
+            printf("\n\t%d < %d = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            smaller(calculator_operand1, calculator_operand2));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case RECTAREA:
+            printf("\n\t%d * %d = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            rectarea(calculator_operand1, calculator_operand2));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case RECTPERI:
+            printf("\n\t2 * (%d + %d) = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            rectperi(calculator_operand1, calculator_operand2));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case 9:
             exit(0);
             break;
         default:
