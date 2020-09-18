@@ -76,4 +76,12 @@ int rectarea(int operand1, int operand2);
 */
 int rectperi(int operand1, int operand2);
 
+/**
+* prime of operand1 and returns the result 
+* @param[in] operand1 
+* @param[in] operand2 
+* @return result of operand1 to be prime
+*/
+int prime(int operand1, int operand2);
+
 #endif  /* #define __CALCULATOR_OPERATIONS_H__ */
