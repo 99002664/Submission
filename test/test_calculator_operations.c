@@ -11,6 +11,10 @@ void test_subtract(void);
 void test_multiply(void);
 void test_divide(void);
 void test_greater(void);
+void test_smaller(void);
+void test_rectarea(void);
+void test_rectperi(void);
+void test_prime(void);
 
 /* Start of the application test */
 int main() {
@@ -28,6 +32,10 @@ int main() {
   CU_add_test(suite, "multiply", test_multiply);
   CU_add_test(suite, "divide", test_divide);
   CU_add_test(suite, "greater", test_greater);
+  CU_add_test(suite, "smaller", test_smaller);
+  CU_add_test(suite, "rectarea", test_rectarea);
+  CU_add_test(suite, "rectperi", test_rectperi);
+  CU_add_test(suite, "prime", test_prime);
 
 
 /* Note: Do not edit START*/
@@ -98,4 +106,12 @@ void test_rectperi(void) {
   
   /* Dummy fail*/
   CU_ASSERT(15 == rectperi(7, 3));
+}
+
+void test_prime(void) {
+  CU_ASSERT(0 == rectperi(6));
+  CU_ASSERT(1 == rectperi(3));
+  
+  /* Dummy fail*/
+  CU_ASSERT(0 == rectperi(3));
 }
