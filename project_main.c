@@ -136,7 +136,7 @@ void calculator_menu(void)
         case PRIME:
             printf("\n\t%d = %d\nEnter to continue", 
             calculator_operand1, 
-            rectperi(calculator_operand1);
+            prime(calculator_operand1);
             
             __fpurge(stdin);
             getchar();
