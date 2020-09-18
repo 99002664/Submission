@@ -12,7 +12,7 @@ int calculator_operand1 = 0;
 int calculator_operand2 = 0;
 
 /* Valid operations */
-enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, GREATER, SMALLER, RECTAREA, RECTPERI, PRIME, EXIT };
+enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, GREATER, SMALLER, RECTAREA, RECTPERI, PRIME, BITWISEAND, BITWISEOR, BITWISENOT EXIT };
 
 /* Display the menu of operations supported */
 void calculator_menu(void);
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 void calculator_menu(void)
 {
     printf("\nAvailable Operations\n");
-    printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Greater\n6. Smaller\n7. Rectarea\n8. Rectperi\n9. Prime\n10. Exit");
+    printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Greater\n6. Smaller\n7. Rectarea\n8. Rectperi\n9. Prime\n10. Bitwiseand\n11. Bitwiseor\n12. Bitwisenot\n13. Exit");
     printf("\n\tEnter your choice\n");
    
      __fpurge(stdin);
@@ -141,7 +141,33 @@ void calculator_menu(void)
             __fpurge(stdin);
             getchar();
             break;
-        case 10:
+        case BITWISEAND:
+            printf("\n\t%d && %d = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            bitwiseand(calculator_operand1, calculator_operand2));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case BITWISEOR:
+            printf("\n\t%d || %d = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            bitwiseor(calculator_operand1, calculator_operand2));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case PRIME:
+            printf("\n\t!%d = %d\nEnter to continue", 
+            calculator_operand1, 
+            prime(calculator_operand1));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case 13:
             exit(0);
             break;
         default:
