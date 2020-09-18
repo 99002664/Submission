@@ -46,7 +46,7 @@ int rectarea(int operand1, int operand2)
 
 int rectperi(int operand1, int operand2)
 {
-    return 2*(operand1 + operand2)
+    return 2*(operand1 + operand2);
 }
     
 
