@@ -68,7 +68,7 @@ int prime(int operand1)
 
 int bitwiseand(int operand1, int operand2)
 {
-    return operand1 & operand2;
+    return operand1 && operand2;
 }
 
 int bitwiseor(int operand1, int operand2)
