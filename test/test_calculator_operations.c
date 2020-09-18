@@ -78,3 +78,24 @@ void test_greater(void) {
   /* Dummy fail*/
   CU_ASSERT(3 == greater(7, 3));
 }
+
+void test_smaller(void) {
+  CU_ASSERT(4 == smaller(4, 8));
+  
+  /* Dummy fail*/
+  CU_ASSERT(7 == smaller(7, 3));
+}
+
+void test_rectarea(void) {
+  CU_ASSERT(40 == rectarea(5, 8));
+  
+  /* Dummy fail*/
+  CU_ASSERT(20 == rectarea(7, 3));
+}
+
+void test_rectperi(void) {
+  CU_ASSERT(20 == rectperi(4, 6));
+  
+  /* Dummy fail*/
+  CU_ASSERT(15 == rectperi(7, 3));
+}
