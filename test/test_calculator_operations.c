@@ -15,6 +15,9 @@ void test_smaller(void);
 void test_rectarea(void);
 void test_rectperi(void);
 void test_prime(void);
+void test_bitwiseand(void);
+void test_bitwiseor(void);
+void test_bitwisenot(void);
 
 /* Start of the application test */
 int main() {
@@ -36,6 +39,9 @@ int main() {
   CU_add_test(suite, "rectarea", test_rectarea);
   CU_add_test(suite, "rectperi", test_rectperi);
   CU_add_test(suite, "prime", test_prime);
+  CU_add_test(suite, "bitwiseand", test_bitwiseand);
+  CU_add_test(suite, "bitwiseor", test_bitwiseor);
+  CU_add_test(suite, "bitwisenot", test_bitwisenot);
 
 
 /* Note: Do not edit START*/
@@ -114,4 +120,25 @@ void test_prime(void) {
   
   /* Dummy fail*/
   CU_ASSERT(0 == prime(3));
+}
+
+void test_bitwiseand(void) {
+  CU_ASSERT(0 == bitwiseand(1,0));
+  
+  /* Dummy fail*/
+  CU_ASSERT(0 == bitwiseand(1,1));
+}
+
+void test_bitwiseor(void) {
+  CU_ASSERT(1 == bitwiseor(1,0));
+  
+  /* Dummy fail*/
+  CU_ASSERT(0 == bitwiseor(1,1));
+}
+
+void test_bitwisenot(void) {
+  CU_ASSERT(0 == bitwisenot(1));
+  
+  /* Dummy fail*/
+  CU_ASSERT(0 == bitwisenot(0));
 }
