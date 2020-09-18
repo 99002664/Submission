@@ -84,4 +84,27 @@ int rectperi(int operand1, int operand2);
 */
 int prime(int operand1);
 
+/**
+*  bitwise and the operand1, operand2 and returns the result
+* @param[in] operand1 
+* @param[in] operand2 
+* @return Result of operand1 && operand2
+*/
+int bitwiseand(int operand1, int operand2);
+
+/**
+*  bitwise or the operand1, operand2 and returns the result
+* @param[in] operand1 
+* @param[in] operand2 
+* @return Result of operand1 || operand2
+*/
+int bitwiseor(int operand1, int operand2);
+
+/**
+*  bitwise not the operand1 and returns the result
+* @param[in] operand1 
+* @return Result of negation of operand1 
+*/
+int bitwisenot(int operand1);
+
 #endif  /* #define __CALCULATOR_OPERATIONS_H__ */
