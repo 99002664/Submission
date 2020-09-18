@@ -73,7 +73,7 @@ void test_divide(void) {
 }
 
 void test_greater(void) {
-  CU_ASSERT(8549 == greater(4563, 8549));
+  CU_ASSERT(8 == greater(4, 8));
   
   /* Dummy fail*/
   CU_ASSERT(3 == greater(7, 3));
