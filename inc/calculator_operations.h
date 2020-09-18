@@ -82,6 +82,6 @@ int rectperi(int operand1, int operand2);
 * @param[in] operand2 
 * @return result of operand1 to be prime
 */
-int prime(int operand1, int operand2);
+int prime(int operand1);
 
 #endif  /* #define __CALCULATOR_OPERATIONS_H__ */
