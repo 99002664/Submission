@@ -109,9 +109,9 @@ void test_rectperi(void) {
 }
 
 void test_prime(void) {
-  CU_ASSERT(0 == rectperi(6));
-  CU_ASSERT(1 == rectperi(3));
+  CU_ASSERT(0 == prime(6));
+  CU_ASSERT(1 == prime(3));
   
   /* Dummy fail*/
-  CU_ASSERT(0 == rectperi(3));
+  CU_ASSERT(0 == prime(3));
 }
