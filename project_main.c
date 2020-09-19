@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 void calculator_menu(void)
 {
     printf("\nAvailable Operations\n");
-    printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Greater\n6. Smaller\n7. Rectarea\n8. Rectperi\n9. Prime\n10. Bitwiseand\n11. Bitwiseor\n12. Bitwisenot\n13. Mdulus\n14. Square\n15. AND\n16. OR\n17. NOT\n18. NAND\n19. NOR\n20. Factorial\n21. Exit");
+    printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Greater\n6. Smaller\n7. Rectarea\n8. Rectperi\n9. Prime\n10. Bitwiseand\n11. Bitwiseor\n12. Bitwisenot\n13. Modulus\n14. Square\n15. AND\n16. OR\n17. NOT\n18. NAND\n19. NOR\n20. Factorial\n21. Exit");
     printf("\n\tEnter your choice\n");
    
      __fpurge(stdin);
