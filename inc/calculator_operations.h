@@ -107,4 +107,67 @@ int bitwiseor(int operand1, int operand2);
 */
 int bitwisenot(int operand1);
 
+/**
+*  perform modulus of operand1 and operand2 and returns the result
+* @param[in] operand1 
+* @param[in] operand2 
+* @return Result of operand1 % operand2
+*/
+int modulus(int operand1, int operand2);
+
+/**
+*  Perform sqare of operand1 and returns the result
+* @param[in] operand1 
+* @return Result of the operand1 which is squared
+*/
+int square(int operand1);
+
+/**
+*  provides AND of operand1, operand2 and returns the result
+* @param[in] operand1 
+* @param[in] operand2 
+* @return Result of the the AND operation
+*/
+int and(int operand1, int operand2);
+
+
+/**
+*  provides OR of operand1, operand2 and returns the result
+* @param[in] operand1 
+* @param[in] operand2 
+* @return Result of the the OR operation
+*/
+int or(int operand1, int operand2);
+
+/**
+*  provides NOT of operand1 and returns the result
+* @param[in] operand1 
+* @return Result of the the NOT operation
+*/
+int not(int operand1);
+
+/**
+*  provides NAND of operand1, operand2 and returns the result
+* @param[in] operand1 
+* @param[in] operand2 
+* @return Result of the the NAND operation
+*/
+int nand(int operand1, int operand2);
+
+/**
+*  provides NOR of operand1, operand2 and returns the result
+* @param[in] operand1 
+* @param[in] operand2 
+* @return Result of the the NOR operation
+*/
+int nor(int operand1, int operand2);
+
+/**
+*  Perform factorial of operand1 and returns the result
+* @param[in] operand1 
+* @return Result will be factorial of operand1
+*/
+int factorial(int operand1);
+
+
 #endif  /* #define __CALCULATOR_OPERATIONS_H__ */
