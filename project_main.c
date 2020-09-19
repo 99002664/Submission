@@ -12,7 +12,7 @@ int calculator_operand1 = 0;
 int calculator_operand2 = 0;
 
 /* Valid operations */
-enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, GREATER, SMALLER, RECTAREA, RECTPERI, PRIME, BITWISEAND, BITWISEOR, BITWISENOT, MODULUS, SQUARE,AND,OR,NOT,NAND,NOR,FACTORIAL, EXIT };
+enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, GREATER, SMALLER, RECTAREA, RECTPERI, PRIME, BITWISEAND, BITWISEOR, BITWISENOT, MODULUS, SQUARE,AND,OR,NOT,NAND,NOR,FACTORIAL, ADDER3BIT,SUBTRACTOR3BIT, EXIT };
 
 /* Display the menu of operations supported */
 void calculator_menu(void);
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 void calculator_menu(void)
 {
     printf("\nAvailable Operations\n");
-    printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Greater\n6. Smaller\n7. Rectarea\n8. Rectperi\n9. Prime\n10. Bitwiseand\n11. Bitwiseor\n12. Bitwisenot\n13. Modulus\n14. Square\n15. AND\n16. OR\n17. NOT\n18. NAND\n19. NOR\n20. Factorial\n21. Exit");
+    printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Greater\n6. Smaller\n7. Rectarea\n8. Rectperi\n9. Prime\n10. Bitwiseand\n11. Bitwiseor\n12. Bitwisenot\n13. Modulus\n14. Square\n15. AND\n16. OR\n17. NOT\n18. NAND\n19. NOR\n20. Factorial\n21. Adder3bit\n22. Subtractor3bit\n23.  Exit");
     printf("\n\tEnter your choice\n");
    
      __fpurge(stdin);
@@ -236,8 +236,27 @@ void calculator_menu(void)
             __fpurge(stdin);
             getchar();
             break;
-
-        case 21:
+        case ADDER3BIT:
+            printf("\n\tAddition of %d %d %d = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            calculator_operand3, 
+            adder3bit(calculator_operand1, calculator_operand2,calculator_operand3));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case SUBTRACTOR3BIT:
+            printf("\n\tSubtraction of %d %d %d = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            calculator_operand3, 
+            subtractor3bit(calculator_operand1, calculator_operand2,calculator_operand3));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case 23:
             exit(0);
             break;
         default:
