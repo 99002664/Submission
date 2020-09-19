@@ -219,7 +219,7 @@ void test_adder3bit(void) {
   /* Dummy fail*/
   CU_ASSERT(1 == adder3bit(1,0,0));
 }
-void test_subtractor3bit(void) {
+void test_subtractorbit(void) {
   CU_ASSERT(0 == adder3bit(1,1,0));
   
   /* Dummy fail*/
