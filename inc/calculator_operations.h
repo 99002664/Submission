@@ -113,7 +113,7 @@ int bitwisenot(int operand1);
 * @param[in] operand2 
 * @return Result of operand1 % operand2
 */
-int mod(int operand1, int operand2);
+int modulus(int operand1, int operand2);
 
 /**
 *  Perform sqare of operand1 and returns the result
