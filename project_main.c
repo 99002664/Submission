@@ -12,7 +12,7 @@ int calculator_operand1 = 0;
 int calculator_operand2 = 0;
 
 /* Valid operations */
-enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, GREATER, SMALLER, RECTAREA, RECTPERI, PRIME, BITWISEAND, BITWISEOR, BITWISENOT, EXIT };
+enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, GREATER, SMALLER, RECTAREA, RECTPERI, PRIME, BITWISEAND, BITWISEOR, BITWISENOT, MODULUS, SQUARE,AND,OR,NOT,NAND,NOR,FACTORIAL, EXIT };
 
 /* Display the menu of operations supported */
 void calculator_menu(void);
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 void calculator_menu(void)
 {
     printf("\nAvailable Operations\n");
-    printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Greater\n6. Smaller\n7. Rectarea\n8. Rectperi\n9. Prime\n10. Bitwiseand\n11. Bitwiseor\n12. Bitwisenot\n13. Exit");
+    printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Greater\n6. Smaller\n7. Rectarea\n8. Rectperi\n9. Prime\n10. Bitwiseand\n11. Bitwiseor\n12. Bitwisenot\n13. Mdulus\n14. Square\n15. AND\n16. OR\n17. NOT\n18. NAND\n19. NOR\n20. Factorial\n21. Exit");
     printf("\n\tEnter your choice\n");
    
      __fpurge(stdin);
@@ -167,7 +167,76 @@ void calculator_menu(void)
             __fpurge(stdin);
             getchar();
             break;
-        case 13:
+        case MODULUS:
+            printf("\n\t%d % %d\nEnter to continue", 
+            calculator_operand1, 
+            modulus(calculator_operand1));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case SQUARE:
+            printf("\n\t%d = %d\nEnter to continue", 
+            calculator_operand1, 
+            square(calculator_operand1));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case AND:
+            printf("\n\t%d && %d = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            and(calculator_operand1, calculator_operand2));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case OR:
+            printf("\n\t%d || %d = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            or(calculator_operand1, calculator_operand2));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case NOT:
+            printf("\n\t ~%d = %d\nEnter to continue", 
+            calculator_operand1, 
+            not(calculator_operand1));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case NAND:
+            printf("\n\t%d && %d = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            nand(calculator_operand1, calculator_operand2));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case NOR:
+            printf("\n\t%d || %d = %d\nEnter to continue", 
+            calculator_operand1, 
+            calculator_operand2,
+            nor(calculator_operand1, calculator_operand2));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+        case FACTORIAL:
+            printf("\n\t%d! = %d\nEnter to continue", 
+            calculator_operand1, 
+            factorial(calculator_operand1));
+            
+            __fpurge(stdin);
+            getchar();
+            break;
+
+        case 21:
             exit(0);
             break;
         default:
