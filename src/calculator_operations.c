@@ -31,7 +31,7 @@ int greater(int operand1, int operand2)
         return operand2;
 }
 
-int smaller(int operand1, int operand2)
+int s(int operand1)
 {
     if(operand1 < operand2)
         return operand1;
