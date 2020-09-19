@@ -170,7 +170,8 @@ void calculator_menu(void)
         case MODULUS:
             printf("\n\t%d % %d\nEnter to continue", 
             calculator_operand1, 
-            modulus(calculator_operand1));
+            calculator_operand2,
+            modulus(calculator_operand1, calculator_operand2));
             
             __fpurge(stdin);
             getchar();
