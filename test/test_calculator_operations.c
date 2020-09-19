@@ -18,6 +18,15 @@ void test_prime(void);
 void test_bitwiseand(void);
 void test_bitwiseor(void);
 void test_bitwisenot(void);
+void test_modulus(void);
+void test_square(void);
+void test_and(void);
+void test_or(void);
+void test_not(void);
+void test_nand(void);
+void test_nor(void);
+void test_factorial(void);
+
 
 /* Start of the application test */
 int main() {
@@ -42,6 +51,16 @@ int main() {
   CU_add_test(suite, "bitwiseand", test_bitwiseand);
   CU_add_test(suite, "bitwiseor", test_bitwiseor);
   CU_add_test(suite, "bitwisenot", test_bitwisenot);
+  CU_add_test(suite, "modulus", test_modulus);
+  CU_add_test(suite, "square", test_square);
+  CU_add_test(suite, "and", test_and);
+  CU_add_test(suite, "or", test_or);
+  CU_add_test(suite, "not", test_not);
+  CU_add_test(suite, "and", test_nand);
+  CU_add_test(suite, "or", test_nor);
+  CU_add_test(suite, "factorial", test_factorial);
+
+
 
 
 /* Note: Do not edit START*/
@@ -141,4 +160,54 @@ void test_bitwisenot(void) {
   
   /* Dummy fail*/
   CU_ASSERT(0 == bitwisenot(0));
+}
+
+void test_modulus(void) {
+  CU_ASSERT(3 == divide(10, 7));
+  
+  /* Dummy fail*/
+  CU_ASSERT(1 == divide(2, 2));
+}
+
+void test_square(void) {
+  CU_ASSERT(49 == square(7));
+  
+  /* Dummy fail*/
+  CU_ASSERT(5 == square(2));
+}
+void test_and(void) {
+  CU_ASSERT(1 == and(1,1));
+  
+  /* Dummy fail*/
+  CU_ASSERT(1 == and(1,0));
+}
+void test_or(void) {
+  CU_ASSERT(1 == or(1,0));
+  
+  /* Dummy fail*/
+  CU_ASSERT(0 == or(1,1));
+}
+void test_not(void) {
+  CU_ASSERT(1 == not(0));
+  
+  /* Dummy fail*/
+  CU_ASSERT(0 == not(0));
+}
+void test_nand(void) {
+  CU_ASSERT(0 == and(1,1));
+  
+  /* Dummy fail*/
+  CU_ASSERT(0 == and(1,0));
+}
+void test_nor(void) {
+  CU_ASSERT(0 == or(1,0));
+  
+  /* Dummy fail*/
+  CU_ASSERT(1 == or(1,1));
+}
+void test_factorial(void) {
+  CU_ASSERT(12 == factorial(4));
+  
+  /* Dummy fail*/
+  CU_ASSERT(5 == factorial(2));
 }
